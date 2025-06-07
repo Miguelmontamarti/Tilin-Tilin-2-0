@@ -106,7 +106,7 @@ function App() {
       </main>
 
       <footer className="main-footer">
-        <p>Tilin Tilin 2.0 © 2024 - Todos los derechos reservados.</p>
+        <p>Tilin Tilin 2.0 © 2024 - Todos los derechos .</p>
       </footer>
       
       <div className="floating-icon">
