@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   // 2. Define los valores de la IP y el puerto para no repetirlos
-  const serverIp = 'TilinTilin.aternos.me';
+  const serverIp = 'Luis Miguel Montaño Martinez';
   const serverPort = '41094';
 
   // 3. Crea estados para el texto de cada botón
