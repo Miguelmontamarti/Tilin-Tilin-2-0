@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   // 2. Define los valores de la IP y el puerto para no repetirlos
-  const serverIp = 'Miguelmontamarti.aternos.me';
+  const serverIp = 'TilinTilin.aternos.me';
   const serverPort = '41094';
 
   // 3. Crea estados para el texto de cada botón
@@ -106,7 +106,7 @@ function App() {
       </main>
 
       <footer className="main-footer">
-        <p>Tilin Tilin 2.0 © 2024 - Todos los derechos reservados.</p>
+          <p>Tilin Tilin 2.0 © 2024 - Todos los derecos reservados.</p>
       </footer>
       
       <div className="floating-icon">
