@@ -1,7 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react'; // 1. Importa useState
 import './App.css';
 
 function App() {
+  // 2. Define los valores de la IP y el puerto para no repetirlos
+  const serverIp = 'cotycoty.aternos.me';
+  const serverPort = '41094';
+
+  // 3. Crea estados para el texto de cada botón
+  const [ipButtonText, setIpButtonText] = useState('Copiar IP');
+  const [portButtonText, setPortButtonText] = useState('Copiar Puerto');
+
+  // 4. Función para copiar la IP
+  const handleCopyIp = () => {
+    navigator.clipboard.writeText(serverIp).then(() => {
+      // Si se copia con éxito
+      setIpButtonText('¡Copiado!');
+      // Vuelve al texto original después de 2 segundos
+      setTimeout(() => {
+        setIpButtonText('Copiar IP');
+      }, 2000);
+    }).catch(err => {
+      // Manejo de errores por si no se puede copiar
+      console.error('Error al copiar la IP: ', err);
+    });
+  };
+
+  // 5. Función para copiar el Puerto
+  const handleCopyPort = () => {
+    navigator.clipboard.writeText(serverPort).then(() => {
+      // Si se copia con éxito
+      setPortButtonText('¡Copiado!');
+      // Vuelve al texto original después de 2 segundos
+      setTimeout(() => {
+        setPortButtonText('Copiar Puerto');
+      }, 2000);
+    }).catch(err => {
+      // Manejo de errores
+      console.error('Error al copiar el puerto: ', err);
+    });
+  };
+
   return (
     <div className="app-container">
       <header className="main-header">
@@ -12,21 +50,30 @@ function App() {
         <section className="join-section">
           <h2>ÚNETE AHORA</h2>
           
-          {/* Texto añadido para Aternos */}
           <p className="aternos-notice">
             (Servidor en Aternos: asegúrate de que esté encendido para unirte)
           </p>
 
+          {/* --- SECCIÓN MODIFICADA --- */}
           <div className="ip-container">
-            {/* IP actualizada */}
-            <div className="ip-address">cotycoty.aternos.me</div>
+            {/* Contenedor para la IP */}
+            <div className="address-item">
+              <div className="ip-address">{serverIp}</div>
+              <button className="copy-button" onClick={handleCopyIp}>
+                {ipButtonText}
+              </button>
+            </div>
             
-            {/* Botón para copiar la IP */}
-            <button className="copy-button">Copiar IP</button>
-            
-            {/* Nuevo botón para el puerto */}
-            <button className="copy-button port-button">Puerto: 41094</button>
+            {/* Contenedor para el Puerto */}
+            <div className="address-item">
+              <div className="ip-address port-number">{serverPort}</div>
+              <button className="copy-button port-button" onClick={handleCopyPort}>
+                {portButtonText}
+              </button>
+            </div>
           </div>
+          {/* --- FIN DE LA SECCIÓN MODIFICADA --- */}
+
         </section>
 
         <section className="gamemodes-section">
