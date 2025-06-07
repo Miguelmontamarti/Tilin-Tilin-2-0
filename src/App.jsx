@@ -11,9 +11,21 @@ function App() {
       <main className="main-content">
         <section className="join-section">
           <h2>ÚNETE AHORA</h2>
+          
+          {/* Texto añadido para Aternos */}
+          <p className="aternos-notice">
+            (Servidor en Aternos: asegúrate de que esté encendido para unirte)
+          </p>
+
           <div className="ip-container">
-            <div className="ip-address">play.tilintilin.gg</div>
-            <button className="copy-ip-button">Copiar IP</button>
+            {/* IP actualizada */}
+            <div className="ip-address">cotycoty.aternos.me</div>
+            
+            {/* Botón para copiar la IP */}
+            <button className="copy-button">Copiar IP</button>
+            
+            {/* Nuevo botón para el puerto */}
+            <button className="copy-button port-button">Puerto: 41094</button>
           </div>
         </section>
 
@@ -50,7 +62,6 @@ function App() {
         <p>Tilin Tilin 2.0 © 2024 - Todos los derechos reservados.</p>
       </footer>
       
-      {/* Icono flotante simulado */}
       <div className="floating-icon">
         <div className="dots"></div>
         <div className="dots"></div>
