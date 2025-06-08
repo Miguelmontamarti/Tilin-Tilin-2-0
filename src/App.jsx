@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
   // 2. Define los valores de la IP y el puerto para no repetirlos
-  const serverIp = 'Luis Miguel Montaño Martinez';
-  const serverPort = '41094';
+  const serverIp = 'TilinTilin2.0.aternos.me';
+  const serverPort = '1111';
 
   // 3. Crea estados para el texto de cada botón
   const [ipButtonText, setIpButtonText] = useState('Copiar IP');
